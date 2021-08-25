@@ -15,5 +15,11 @@ Use a command line like it :
 java -jar ffmpeg-digester.jar --ffmpeg ffmpeg.exe --input ./pictures --output myVideo.mkv --codec libx264
 ```
 
+4. When process is done juste create a file "stop.txt" (or the name given by the parameter --stop-file) into the input folder, and the application will give the last frame to ffmpeg and stop it.
+
 # How to build it ?
 mvn clean compile assembly:single
+
+# Some questions
+1. I've created one picture and the program don't give it to ffmpeg
+The program will attempt that the picture "n+1" will exists to digest "n". The reason is to ensure that the "n" is finished to be wrotte on disk before try to read it.
