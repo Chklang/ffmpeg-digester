@@ -21,5 +21,6 @@ java -jar ffmpeg-digester.jar --ffmpeg ffmpeg.exe --input ./pictures --output my
 mvn clean compile assembly:single
 
 # Some questions
-1. I've created one picture and the program don't give it to ffmpeg
-The program will attempt that the picture "n+1" will exists to digest "n". The reason is to ensure that the "n" is finished to be wrotte on disk before try to read it.
+**1. I've created one picture and the program don't give it to ffmpeg**
+
+   The program will attempt that the picture "n+1" will exists to digest "n". The reason is to ensure that the "n" is finished to be wrotte on disk before try to read it.
